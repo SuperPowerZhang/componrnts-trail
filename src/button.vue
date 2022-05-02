@@ -1,20 +1,28 @@
 <template>
-  <button class="y-button">
+  <button
+    :class="'y-button ' + (icon_position === 'right' ? 'icon-right' : '')"
+  >
     <svg class="icon" aria-hidden="true" v-if="icon">
-      <use :xlink:href="`#i-${icon}`"></use></svg
-    ><slot />
+      <use :xlink:href="`#i-${icon}`"></use>
+    </svg>
+    <slot />
   </button>
 </template>
 
 <script>
 export default {
-  props: ["icon"],
+  props: ["icon", "icon_position"],
+  created() {
+    console.log(this.icon, this.icon_position);
+  },
 };
 </script>
 
 <style scoped lang="scss">
 .y-button {
-  display: flex;
+  // inline会导致这一行对不齐，奇怪，加了vertical可以
+  display: inline-flex;
+  vertical-align: middle;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -27,6 +35,13 @@ export default {
   background-color: var(--default--bg);
   .icon {
     margin-right: 0.5em;
+  }
+  &.icon-right {
+    > .icon {
+      order: 2;
+      margin-right: 0;
+      margin-left: 0.5em;
+    }
   }
 }
 .y-button:hover {
