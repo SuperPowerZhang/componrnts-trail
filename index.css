@@ -1,21 +1,21 @@
+:root {
+    --button-height: 32px;
+    --font-size: 14px;
+    --default--text-color: #3e504d;
+    --default--bg: #fff;
+    --button-active-bg: #dee0c7;
+    --button-hover-border: #8ea387;
+    --color3: #818b59;
+    --color4: #aec1ca;
+    --button-border: #495c56;
+    --color6: #bac9b8;
+    --border-radius: 4px;
+  }
+  
 body {
     padding: 32px;
 }
 
-:root{
-    --button-width:80px;
-    --button-height:32px;
-    --font-size:14px;
-    --default--text-color:#3e504d;
-    --default--bg:#fff;
-    --button-active-bg:#dee0c7;
-    --button-hover-border:#8ea387;
-    --color3:#818b59;
-    --color4:#aec1ca;
-    --button-border:#495c56;
-    --color6:#bac9b8;
-    --border-radius:4px;
-}
     .icon {
        width: 1em; height: 1em;
        vertical-align: -0.15em;

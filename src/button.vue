@@ -11,7 +11,16 @@
 
 <script>
 export default {
-  props: ["icon", "icon_position"],
+  props: {
+    icon: {},
+    icon_position: {
+      type: String,
+      default: "left",
+      validator(val) {
+        return val === "left" || val === "right";
+      },
+    },
+  },
   created() {
     console.log(this.icon, this.icon_position);
   },
@@ -29,9 +38,9 @@ export default {
   height: var(--button-height);
   font-size: var(--font-size);
   padding: 0 1em;
-  border: 1px solid #3e504d;
+  border: 1px solid var(--button-border);
   border-radius: var(--border-radius);
-  color: var(--button-border-color);
+  color: var(--button-border);
   background-color: var(--default--bg);
   .icon {
     margin-right: 0.5em;
