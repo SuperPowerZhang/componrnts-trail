@@ -8,11 +8,11 @@ body {
     --font-size:14px;
     --default--text-color:#3e504d;
     --default--bg:#fff;
-    --color1:#dee0c7;
-    --color2:#8ea387;
+    --button-active-bg:#dee0c7;
+    --button-hover-border:#8ea387;
     --color3:#818b59;
     --color4:#aec1ca;
-    --color5:#495c56;
+    --button-border:#495c56;
     --color6:#bac9b8;
 }
 
@@ -21,13 +21,13 @@ height: var(--button-height);
 font-size: var(--font-size);
 padding: 0 1em;
 border: 1px solid #3e504d;
-color:var(--color5);
 border-radius: 4px;
-background-color: #fff;
+color:var(--button-border-color);
+background-color: var( --default--bg);
 }
 .y-button:hover{
-    border-color: var(--color2);
+    border-color: var(--button-hover-border);
 }
 .y-button:active{
-    background-color: var(--color1);
+    background-color: var(--button-active-bg);
 }
