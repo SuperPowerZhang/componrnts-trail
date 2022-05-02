@@ -2,9 +2,13 @@
   "name": "components-trail",
   "version": "1.0.0",
   "description": "UI 组件库",
-  "main": "index.js",
+  "source": "src/index.js",
+  "main": "dist/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "parcel watch",
+    "build": "parcel build",
+    "dev": "parcel index.html --no-cache"
   },
   "repository": {
     "type": "git",
@@ -21,6 +25,17 @@
   },
   "homepage": "https://github.com/SuperPowerZhang/componrnts-trail#readme",
   "dependencies": {
-    "vue": "^2.6.14"
+    "vue": "^2.6.14",
+    "vue-hot-reload-api": "^2.3.4"
+  },
+  "devDependencies": {
+    "@parcel/transformer-vue": "^2.5.0",
+    "@vue/component-compiler-utils": "^3.3.0",
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.51.0",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
   }
 }
