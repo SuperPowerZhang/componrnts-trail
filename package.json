@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/SuperPowerZhang/componrnts-trail#readme",
   "dependencies": {
-    "vue": "^3.2.33"
+    "vue": "^2.6.14"
   }
 }
