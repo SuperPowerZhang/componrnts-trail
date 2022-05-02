@@ -1,0 +1,33 @@
+body {
+    padding: 32px;
+}
+
+:root{
+    --button-width:80px;
+    --button-height:32px;
+    --font-size:14px;
+    --default--text-color:#3e504d;
+    --default--bg:#fff;
+    --color1:#dee0c7;
+    --color2:#8ea387;
+    --color3:#818b59;
+    --color4:#aec1ca;
+    --color5:#495c56;
+    --color6:#bac9b8;
+}
+
+.y-button{
+height: var(--button-height);
+font-size: var(--font-size);
+padding: 0 1em;
+border: 1px solid #3e504d;
+color:var(--color5);
+border-radius: 4px;
+background-color: #fff;
+}
+.y-button:hover{
+    border-color: var(--color2);
+}
+.y-button:active{
+    background-color: var(--color1);
+}
