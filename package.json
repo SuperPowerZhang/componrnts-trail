@@ -1,0 +1,23 @@
+{
+  "name": "components-trail",
+  "version": "1.0.0",
+  "description": "UI 组件库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuperPowerZhang/componrnts-trail.git"
+  },
+  "keywords": [
+    "vue",
+    "UI-components"
+  ],
+  "author": "SuperPowerZhang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SuperPowerZhang/componrnts-trail/issues"
+  },
+  "homepage": "https://github.com/SuperPowerZhang/componrnts-trail#readme"
+}
