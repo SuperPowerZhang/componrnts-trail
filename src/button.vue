@@ -1,11 +1,15 @@
 <template>
   <button
-    :class="'y-button ' + (icon_position === 'right' ? 'icon-right' : '')"
+    :class="
+      $classNames('y-button ', { 'icon-right': icon_position === 'right' })
+    "
+    @click="onClickButton"
   >
+    <y-icon icon="loading-fish" v-if="isLoading" />
     <y-icon :icon="icon" v-if="icon" />
     <!-- <svg class="icon" aria-hidden="true" v-if="icon">
       <use :xlink:href="`#i-${icon}`"></use>
-    </svg> -->
+    </svg>  -->
     <slot />
   </button>
 </template>
@@ -13,6 +17,10 @@
 <script>
 export default {
   props: {
+    loading: {
+      type: Boolean,
+      default: false,
+    },
     icon: {},
     icon_position: {
       type: String,
@@ -22,8 +30,26 @@ export default {
       },
     },
   },
+  data() {
+    return {
+      loadingStatus: true,
+    };
+  },
+  computed: {
+    isLoading: function () {
+      console.log(1111, this.loading, this.loadingStatus);
+      return this?.loading && this?.loadingStatus;
+    },
+  },
+  methods: {
+    onClickButton() {
+      if (this.loading) {
+        this.loadingStatus = !this.loadingStatus;
+      }
+    },
+  },
   created() {
-    console.log(this.icon, this.icon_position);
+    console.log(this.icon, this.icon_position, this.isLoading);
   },
 };
 </script>

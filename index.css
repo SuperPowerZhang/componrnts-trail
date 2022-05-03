@@ -11,15 +11,10 @@
     --color6: #bac9b8;
     --border-radius: 4px;
   }
-  
+
 body {
     padding: 32px;
 }
 
-    .icon {
-       width: 1em; height: 1em;
-       vertical-align: -0.15em;
-       fill: currentColor;
-       overflow: hidden;
-    }
+
 
