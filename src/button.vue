@@ -2,9 +2,10 @@
   <button
     :class="'y-button ' + (icon_position === 'right' ? 'icon-right' : '')"
   >
-    <svg class="icon" aria-hidden="true" v-if="icon">
+    <y-icon :icon="icon" v-if="icon" />
+    <!-- <svg class="icon" aria-hidden="true" v-if="icon">
       <use :xlink:href="`#i-${icon}`"></use>
-    </svg>
+    </svg> -->
     <slot />
   </button>
 </template>
