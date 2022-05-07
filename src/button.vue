@@ -1,16 +1,14 @@
 <template>
   <button
-    :class="
-      $classNames('y-button ', { 'icon-right': icon_position === 'right' })
-    "
+    :class="'y-button ' + (icon_position === 'right' ? 'icon-right' : '')"
     @click="onClickButton"
   >
+    <slot />
     <y-icon icon="loading-fish" v-if="isLoading" />
     <y-icon :icon="icon" v-if="icon" />
     <!-- <svg class="icon" aria-hidden="true" v-if="icon">
       <use :xlink:href="`#i-${icon}`"></use>
     </svg>  -->
-    <slot />
   </button>
 </template>
 
@@ -48,9 +46,7 @@ export default {
       }
     },
   },
-  created() {
-    console.log(this.icon, this.icon_position, this.isLoading);
-  },
+  created() {},
 };
 </script>
 
