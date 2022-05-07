@@ -5,7 +5,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    console.log(this.$el.children);
+    for (let ele of this.$el.children) {
+      if (ele.nodeName.toLowerCase() !== "button") {
+        console.warn(
+          `button-group的子元素最好是button,实际是${ele.nodeName.toLowerCase()}`
+        );
+      }
+    }
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -24,8 +35,10 @@ export default {};
   }
 }
 .y-button {
-  margin-left: -1px;
   border-radius: 0;
+  &:not(first-child) {
+    margin-left: -1px;
+  }
   &:hover {
     z-index: 1;
   }
