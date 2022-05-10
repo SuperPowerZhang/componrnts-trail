@@ -3,8 +3,8 @@
     :class="'y-button ' + (icon_position === 'right' ? 'icon-right' : '')"
     @click="onClickButton"
   >
-    <slot />
-    <y-icon icon="loading-fish" v-if="isLoading" />
+    <slot></slot>
+    <!-- <y-icon icon="loading-fish" v-if="isLoading" /> -->
     <y-icon :icon="icon" v-if="icon" />
     <!-- <svg class="icon" aria-hidden="true" v-if="icon">
       <use :xlink:href="`#i-${icon}`"></use>
