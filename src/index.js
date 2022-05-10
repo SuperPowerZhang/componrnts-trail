@@ -16,3 +16,24 @@ new Vue({
         message:'hi'
     }
 })
+
+// 单元测试
+import chai from 'chai';
+
+const expect = chai.expect;
+{
+    const Constructor = Vue.extend(Icon);
+    const icon = new Constructor({
+           propsData:{
+               icon:'loading-fish'
+           }
+    } );
+    //TODO 这里还是undefined
+// console.log(222, icon?.$el?.tagName);
+setTimeout(()=>{
+// console.log(4444, icon?.$el?.tagName);
+const {tagName}= icon.$el;
+expect(tagName).to.eq('svg')
+},100)
+    icon.$mount("#test")
+}
